@@ -1,0 +1,21 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"love2d",
+				"--console",
+				"$project_path"
+			],
+			"name": "LOVE",
+			"target": "run_love2d"
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CPGD/AsteroidLove"
+		}
+	]
+}
