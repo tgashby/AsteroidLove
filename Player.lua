@@ -31,6 +31,18 @@ function Player:Update(dt)
 		self.heading = self.heading - 360 
 	end
 
+	if self.position.x + self.bounds.width < 0 then
+		self.position.x = 800
+	elseif self.position.x > 800 then
+		self.position.x = -self.bounds.width
+	end
+
+	if self.position.y + self.bounds.height < 0 then
+		self.position.y = 600
+	elseif self.position.y > 600 then
+		self.position.y = -self.bounds.height
+	end
+
 	self.bounds.x, self.bounds.y = self.position.x, self.position.y
 
 	if self.angVelocity > 0 then

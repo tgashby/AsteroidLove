@@ -4,8 +4,48 @@
 		"selected_items":
 		[
 			[
+				"for",
+				"for	for i=1,10"
+			],
+			[
 				"Aster",
 				"AsteroidFactory"
+			],
+			[
+				"ast",
+				"asteroidsDestoyed"
+			],
+			[
+				"As",
+				"Asteroid"
+			],
+			[
+				"aster",
+				"asteroidsDestoyed"
+			],
+			[
+				"astero",
+				"asteroidsDestoyed"
+			],
+			[
+				"img",
+				"img"
+			],
+			[
+				"bullet",
+				"bulletsToRemove"
+			],
+			[
+				"bull",
+				"bulletsToRemove"
+			],
+			[
+				"Asd",
+				"AsteroidFactory"
+			],
+			[
+				"Update",
+				"Update"
 			],
 			[
 				"Draw",
@@ -32,10 +72,6 @@
 				"filesystem"
 			],
 			[
-				"bull",
-				"bullets"
-			],
-			[
 				"Bull",
 				"BulletFactory"
 			],
@@ -56,20 +92,12 @@
 				"removeNdxs"
 			],
 			[
-				"aster",
-				"asteroid"
-			],
-			[
 				"AS",
 				"AsteroidFactory"
 			],
 			[
 				"asteroi",
 				"asteroid"
-			],
-			[
-				"As",
-				"AsteroidFactory"
 			],
 			[
 				"vel",
@@ -82,10 +110,6 @@
 			[
 				"control",
 				"controllers"
-			],
-			[
-				"for",
-				"fori	for i,v in ipairs()"
 			],
 			[
 				"begin",
@@ -490,30 +514,6 @@
 			[
 				"has",
 				"hasOwnProperty"
-			],
-			[
-				"eve",
-				"event"
-			],
-			[
-				"even",
-				"events"
-			],
-			[
-				"next",
-				"nextTick"
-			],
-			[
-				"cur",
-				"currTime"
-			],
-			[
-				"comp",
-				"components"
-			],
-			[
-				"ent",
-				"entities"
 			]
 		]
 	},
@@ -531,7 +531,7 @@
 			"file": "main.lua",
 			"settings":
 			{
-				"buffer_size": 1869,
+				"buffer_size": 3886,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,7 +539,7 @@
 			"file": "Player.lua",
 			"settings":
 			{
-				"buffer_size": 1407,
+				"buffer_size": 1715,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,7 +547,7 @@
 			"file": "Asteroid.lua",
 			"settings":
 			{
-				"buffer_size": 683,
+				"buffer_size": 997,
 				"line_ending": "Windows"
 			}
 		},
@@ -563,7 +563,7 @@
 			"file": "Bullet.lua",
 			"settings":
 			{
-				"buffer_size": 632,
+				"buffer_size": 577,
 				"line_ending": "Windows"
 			}
 		},
@@ -571,7 +571,7 @@
 			"file": "BulletFactory.lua",
 			"settings":
 			{
-				"buffer_size": 792,
+				"buffer_size": 446,
 				"line_ending": "Windows"
 			}
 		},
@@ -579,7 +579,7 @@
 			"file": "AsteroidFactory.lua",
 			"settings":
 			{
-				"buffer_size": 964,
+				"buffer_size": 498,
 				"line_ending": "Windows"
 			}
 		},
@@ -1171,15 +1171,15 @@
 					"file": "main.lua",
 					"settings":
 					{
-						"buffer_size": 1869,
+						"buffer_size": 3886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1598,
-								1598
+								2675,
+								2675
 							]
 						],
 						"settings":
@@ -1188,25 +1188,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 756.0,
+						"translation.y": 1890.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
 					"buffer": 2,
 					"file": "Player.lua",
 					"settings":
 					{
-						"buffer_size": 1407,
+						"buffer_size": 1715,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1178,
-								1178
+								1032,
+								1032
 							]
 						],
 						"settings":
@@ -1216,7 +1222,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 395.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1226,15 +1232,15 @@
 					"file": "Asteroid.lua",
 					"settings":
 					{
-						"buffer_size": 683,
+						"buffer_size": 997,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								513,
-								513
+								568,
+								568
 							]
 						],
 						"settings":
@@ -1243,20 +1249,15 @@
 							[
 								80
 							],
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
+				},
 				{
 					"buffer": 4,
 					"file": "SpaceObject.lua",
@@ -1269,8 +1270,8 @@
 						"selection":
 						[
 							[
-								98,
-								98
+								395,
+								402
 							]
 						],
 						"settings":
@@ -1293,20 +1294,21 @@
 					"file": "Bullet.lua",
 					"settings":
 					{
-						"buffer_size": 632,
+						"buffer_size": 577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								575,
-								575
+								519,
+								519
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1319,21 +1321,22 @@
 					"file": "BulletFactory.lua",
 					"settings":
 					{
-						"buffer_size": 792,
+						"buffer_size": 446,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								724,
-								724
+								275,
+								275
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 54.0,
@@ -1346,15 +1349,15 @@
 					"file": "AsteroidFactory.lua",
 					"settings":
 					{
-						"buffer_size": 964,
+						"buffer_size": 498,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								401,
-								401
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1387,7 +1390,8 @@
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1438,7 +1442,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 256.0
+		"height": 260.0
 	},
 	"output.git":
 	{
