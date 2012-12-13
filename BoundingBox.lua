@@ -10,7 +10,7 @@ BoundingBox = Class {
 }
 
 function BoundingBox:IsColliding(otherBox)
-	return self.x < otherBox.x + otherBox.weight and 
+	return self.x < otherBox.x + otherBox.width and 
 	 self.x + self.width > otherBox.x and 
 	 self.y < otherBox.y + otherBox.height and 
 	 self.y + self.height > otherBox.y

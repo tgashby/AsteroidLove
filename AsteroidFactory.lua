@@ -1,5 +1,3 @@
-require('Asteroid')
-
 AsteroidFactory = {}
 AsteroidFactory.asteroids = {}
 
@@ -13,25 +11,6 @@ function AsteroidFactory:UpdateAll(dt, player)
 
 	for i, asteroid in ipairs(self.asteroids) do
 		asteroid:Update(dt)
-
-		if asteroid.health <= 0 then
-			asteroid:Explode()
-			removeNdxs[#removeNdxs + 1] = i
-		end
-
-		for j, bullet in ipairs(BulletFactory.bullets) do
-			if asteroid.bounds:IsColliding(bullet.bounds) then
-				asteroid.collision_with["Bullet"](bullet)
-			end
-		end
-
-		if asteroid.bounds:IsColliding(player.bounds) then
-			asteroid.collision_with["Player"](player)
-		end
-	end
-
-	for i, ndx in ipairs(removeNdxs) do
-		table.remove(self.asteroids, ndx)
 	end
 end
 
