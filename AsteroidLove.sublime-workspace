@@ -595,9 +595,25 @@
 	"build_system": "LOVE",
 	"command_palette":
 	{
-		"height": 81.0,
+		"height": 104.0,
 		"selected_items":
 		[
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"git:co",
+				"Git: Commit"
+			],
 			[
 				"form",
 				"Format: Javascript"
@@ -623,10 +639,6 @@
 				"Git: Commit"
 			],
 			[
-				"git add",
-				"Git: Add..."
-			],
-			[
 				"git:  comm",
 				"Git: Commit"
 			],
@@ -641,10 +653,6 @@
 			[
 				"java",
 				"Format: Javascript"
-			],
-			[
-				"git comm",
-				"Git: Commit"
 			],
 			[
 				"git status",
@@ -731,7 +739,7 @@
 				"Snippet: for i=1,10"
 			]
 		],
-		"width": 416.0
+		"width": 400.0
 	},
 	"console":
 	{
@@ -1203,7 +1211,8 @@
 							[
 								80
 							],
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1230,7 +1239,8 @@
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1280,8 +1290,8 @@
 						"selection":
 						[
 							[
-								577,
-								577
+								581,
+								581
 							]
 						],
 						"settings":
@@ -1339,7 +1349,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Lua/Lua.tmLanguage"
+							"syntax": "Packages/Lua/Lua.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1411,6 +1422,10 @@
 	"output.exec":
 	{
 		"height": 256.0
+	},
+	"output.git":
+	{
+		"height": 118.0
 	},
 	"replace":
 	{

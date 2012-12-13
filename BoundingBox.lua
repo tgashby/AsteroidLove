@@ -1,11 +1,13 @@
 local Class = require('hump.class')
 
-BoundingBox = Class {function (self, x, y, w, h)
-	self.x = x
-	self.y = y
-	self.width = w
-	self.height = h
-end}
+BoundingBox = Class {
+	function (self, x, y, w, h)
+		self.x = x
+		self.y = y
+		self.width = w
+		self.height = h
+	end
+}
 
 function BoundingBox:IsColliding(otherBox)
 	return self.x < otherBox.x + otherBox.weight and 

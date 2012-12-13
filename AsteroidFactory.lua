@@ -1,5 +1,4 @@
 require('Asteroid')
-require('BulletFactory')
 
 AsteroidFactory = {}
 AsteroidFactory.asteroids = {}
