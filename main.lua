@@ -32,6 +32,7 @@ function love.load()
 	love.joystick.update()
 
 	player = Player(100, Vector2D(400, 300))
+	AsteroidFactory:GenerateAsteroid(20, love.graphics.newImage('img/asteroid1.png'), Vector2D(20, 20))
 
 	for i = 1, love.joystick.getNumJoysticks() do
 		table.insert(controllers, xpad:newplayer())
@@ -45,7 +46,7 @@ function love.update(dt)
 	xpad:update()
 
 	if pad:justReleased("a") then
-		--player:Shoot()
+		player:Shoot()
 	end
 
 	if math.abs(pad:getAxis("leftx")) > 0.2 then
@@ -64,10 +65,14 @@ function love.update(dt)
 	end
 
 	player:Update(dt)
+	BulletFactory:UpdateAll(dt)
+	AsteroidFactory:UpdateAll(dt, player)
 end
 
 function love.draw()
 	player:Draw()
+	BulletFactory:DrawAll()
+	AsteroidFactory:DrawAll()
 end
 
 function love.keyreleased(key, unicode)

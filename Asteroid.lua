@@ -2,7 +2,7 @@ local Class = require('hump.class')
 local Vector2D = require('hump.vector')
 require('SpaceObject')
 
-Asteroid = Class{inherts = SpaceObject,
+Asteroid = Class {inherts = SpaceObject,
 	function(self, health, img, pos, vel, accel, angV, heading)
 		SpaceObject.construct(self, img, "Asteroid", health, pos, vel, accel,
 		 angV, heading)
@@ -21,5 +21,5 @@ function Asteroid:Explode()
 end
 
 function Asteroid:Update(dt)
-	self.UpdatePosition(dt)
+	self:UpdatePosition(dt)
 end

@@ -2,7 +2,7 @@ local Class = require('hump.class')
 local Vector2D = require('hump.vector')
 require('SpaceObject')
 
-Bullet = {inherits = SpaceObject,
+Bullet = Class {inherits = SpaceObject,
 	function (self, health, damage, pos, vel, accel, angV, heading)
 		SpaceObject.construct(self, love.graphics.newImage('img/bullet.png'), 
 		 "Bullet", health, pos, vel, accel, angV, heading)
@@ -18,5 +18,5 @@ Bullet = {inherits = SpaceObject,
 }
 
 function Bullet:Update(dt)
-	self.UpdatePosition(dt)
+	self:UpdatePosition(dt)
 end

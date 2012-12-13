@@ -1,6 +1,7 @@
 local Class = require('hump.class')
 local Vector2D = require('hump.vector')
 require('SpaceObject')
+require('BulletFactory')
 
 local UnitVec = Vector2D(0, 1)
 
@@ -41,4 +42,9 @@ function Player:Update(dt)
 	if self.heading > 360 then 
 		self.heading = self.heading - 360 
 	end
+end
+
+function Player:Shoot()
+	BulletFactory:GenerateBullet(10, Vector2D(self.bounds.x - (UnitVec:rotated(self.heading) * 16).x, 
+	 self.bounds.y - (UnitVec:rotated(self.heading) * 16).y), UnitVec:rotated(self.heading) * -150, 10)
 end
