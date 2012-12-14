@@ -10,6 +10,7 @@ Timer = require('hump.timer')
 local controllers = {}
 local asteroidsDestoyed = 0
 local gameOver = false
+local justHit = false
 
 love.filesystem.load("SpaceObject.lua")()
 love.filesystem.load("AsteroidFactory.lua")()
@@ -25,6 +26,7 @@ function love.load()
 	love.joystick.update()
 
 	player = Player(100, Vector2D(400, 300))
+	shipImg = love.graphics.newImage('img/ship.png')
 
 	for i = 1, love.joystick.getNumJoysticks() do
 		table.insert(controllers, xpad:newplayer())
@@ -81,7 +83,15 @@ function DispatchCollisions()
 
 		if asteroid.bounds:IsColliding(player.bounds) then
 			asteroid.collision_with["Player"](player)
-			player.collision_with["Asteroid"](asteroid)
+
+			if not justHit then
+				player.collision_with["Asteroid"](asteroid)
+			end
+			
+			justHit = true
+			Timer.add(2, function (timedFunc)
+				justHit = false
+			end)
 		end
 
 		if asteroid.health <= 0 then
@@ -113,6 +123,12 @@ function love.update(dt)
 
 	if pad:justReleased("a") then
 		player:Shoot()
+	end
+
+	if pad:justReleased("b") then
+		player.position.x = math.random(0, 800)
+		player.position.y = math.random(0, 600)
+		player:Update(0)
 	end
 
 	if math.abs(pad:getAxis("leftx")) > 0.2 then
@@ -155,8 +171,17 @@ function love.draw()
 		else
 			love.graphics.print("You WIN!", 350, 300)
 		end
+
+		return
 	end
 
+	if justHit then
+		love.graphics.print("Collision!", 350, 300)
+	end
+
+	for lives = 1, math.ceil(player.health / 10) do
+		love.graphics.draw(shipImg, 800 - player.bounds.width * 2 * lives, 600 - player.bounds.height * 2)
+	end
 end
 
 function love.keyreleased(key, unicode)
