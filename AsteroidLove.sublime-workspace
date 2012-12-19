@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ship",
+				"shipImg"
+			],
+			[
 				"for",
 				"for	for i=1,10"
 			],
@@ -510,10 +514,6 @@
 			[
 				"cont",
 				"continue"
-			],
-			[
-				"has",
-				"hasOwnProperty"
 			]
 		]
 	},
@@ -528,10 +528,20 @@
 			}
 		},
 		{
+			"contents": "Package Control Messages\n========================\n\nAdvancedNewFile:\n---------------\n\n  Thank you for installing the AdvancedNewFile plugin.\n  \n  For more information please visit https://github.com/skuroda/Sublime-AdvancedNewFile.\n  \n  Note you may need to restart Sublime Text 2 after installing this plugin.\n  \n  If you have any questions, comments, or run into issues, please let me know! Hope you enjoy the plugin.\n  \n  Thank you!\n",
+			"settings":
+			{
+				"buffer_size": 435,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
 			"file": "main.lua",
 			"settings":
 			{
-				"buffer_size": 3886,
+				"buffer_size": 4451,
 				"line_ending": "Windows"
 			}
 		},
@@ -595,9 +605,29 @@
 	"build_system": "LOVE",
 	"command_palette":
 	{
-		"height": 104.0,
+		"height": 58.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"Packagr",
+				"Package Control: Add Repository"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"About"
+			],
 			[
 				"git push",
 				"Git: Push"
@@ -617,10 +647,6 @@
 			[
 				"form",
 				"Format: Javascript"
-			],
-			[
-				"",
-				"About"
 			],
 			[
 				"buil",
@@ -731,10 +757,6 @@
 				"Package Control: Add Channel"
 			],
 			[
-				"Packa",
-				"Package Control: Add Repository"
-			],
-			[
 				"Snippet: ",
 				"Snippet: for i=1,10"
 			]
@@ -756,6 +778,9 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Tag/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CPGD/AsteroidLove/hey.lua",
+		"/C/Program Files (x86)/Vim/vim73/vimtutor.bat",
 		"/C/Users/Tag/Desktop/love2d-x360-test-master/main.lua",
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CPGD/AsteroidLove/AsteroidLove.sublime-project",
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CPGD/AsteroidLove/bullet.lua",
@@ -763,7 +788,6 @@
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CPGD/AsteroidLove/main.lua",
 		"/C/Users/Tag/Desktop/love2d-x360-test-master/conf.lua",
 		"/C/Users/Tag/Desktop/XPad-master/init.lua",
-		"/C/Users/Tag/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/C/Users/Tag/AppData/Roaming/Sublime Text 2/Packages/sublove2d/sublove2d.py",
 		"/C/Users/Tag/AppData/Local/Temp/35613900-1ac0-485a-a111-5bf7785a9e0c/home/tgashby/Documents/305/Milestone1/tests/Checkers/Checkers.1",
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone0/tests/Checkers/Checkers.1",
@@ -881,9 +905,7 @@
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone 0/tests/Othello/Othello.1",
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone 0/tests/Pylos/Pylos.1",
 		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone 0/tests/Othello/Othello.0",
-		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone 0/tests/Pylos/Pylos.2",
-		"/C/Users/Tag/Downloads/Checkers (2).4",
-		"/C/Users/Tag/Downloads/Checkers (1).4"
+		"/C/Users/Tag/Google Drive/Cal Poly Classes/Fourth Year/CSC305/Milestone 0/tests/Pylos/Pylos.2"
 	],
 	"find":
 	{
@@ -902,6 +924,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"bounds",
+			"true",
 			"16",
 			" {",
 			"VEL",
@@ -1027,9 +1051,7 @@
 			"\\[(\\w+)\\]",
 			"    ",
 			"^\\s+",
-			"gravity",
-			"'",
-			"canvas"
+			"gravity"
 		],
 		"highlight": true,
 		"in_selection": true,
@@ -1150,8 +1172,8 @@
 						"selection":
 						[
 							[
-								351,
-								351
+								1499,
+								1499
 							]
 						],
 						"settings":
@@ -1168,18 +1190,44 @@
 				},
 				{
 					"buffer": 1,
-					"file": "main.lua",
 					"settings":
 					{
-						"buffer_size": 3886,
+						"buffer_size": 435,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2675,
-								2675
+								24,
+								24
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "main.lua",
+					"settings":
+					{
+						"buffer_size": 4451,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4451,
+								4451
 							]
 						],
 						"settings":
@@ -1188,7 +1236,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1890.0,
+						"translation.y": 2754.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1200,7 +1248,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "Player.lua",
 					"settings":
 					{
@@ -1211,8 +1259,8 @@
 						"selection":
 						[
 							[
-								1032,
-								1032
+								1159,
+								1159
 							]
 						],
 						"settings":
@@ -1222,13 +1270,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 395.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "Asteroid.lua",
 					"settings":
 					{
@@ -1259,7 +1307,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": "SpaceObject.lua",
 					"settings":
 					{
@@ -1270,8 +1318,8 @@
 						"selection":
 						[
 							[
-								395,
-								402
+								310,
+								310
 							]
 						],
 						"settings":
@@ -1290,7 +1338,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": "Bullet.lua",
 					"settings":
 					{
@@ -1317,7 +1365,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "BulletFactory.lua",
 					"settings":
 					{
@@ -1328,8 +1376,8 @@
 						"selection":
 						[
 							[
-								275,
-								275
+								446,
+								446
 							]
 						],
 						"settings":
@@ -1345,7 +1393,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": "AsteroidFactory.lua",
 					"settings":
 					{
@@ -1372,7 +1420,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": "BoundingBox.lua",
 					"settings":
 					{
@@ -1458,6 +1506,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"con",
+				"conf.lua"
+			],
 			[
 				"",
 				"examples/pong/release1.html"
