@@ -52,8 +52,10 @@ function love.load()
 				end
 			end
 
-			local dirToCenter = (Vector2D(400, 300) - Vector2D(posX, posY)):normalize_inplace()
-			local velocity = dirToCenter:rotated(math.rad(math.random(-30, 30))) * 50
+			local dirToCenter = (Vector2D(400, 300) -
+			 	Vector2D(posX, posY)):normalize_inplace()
+			local velocity = dirToCenter:rotated(math.rad(
+				math.random(-30, 30))) * 50
 
 			AsteroidFactory:GenerateAsteroid(20, --health
 				img, --img
@@ -68,7 +70,7 @@ end
 
 
 function DispatchCollisions()
-	asteroidsToRemove, bulletsToRemove = {}, {}
+	local asteroidsToRemove, bulletsToRemove = {}, {}
 
 	for i, asteroid in ipairs(AsteroidFactory.asteroids) do
 		for j, bullet in ipairs(BulletFactory.bullets) do
@@ -112,7 +114,6 @@ function DispatchCollisions()
 	end
 end
 
-
 function love.update(dt)
 	if gameOver then
 		return
@@ -121,31 +122,6 @@ function love.update(dt)
 	love.joystick.update()
 	xpad:update()
 	Timer.update(dt)
-
-	if pad:justReleased("a") then
-		player:Shoot()
-	end
-
-	if pad:justReleased("b") then
-		player.position.x = math.random(0, 800)
-		player.position.y = math.random(0, 600)
-		player:Update(0)
-	end
-
-	if math.abs(pad:getAxis("leftx")) > 0.2 then
-		player.angVelocity = player.angVelocity + pad:getAxis("leftx") * 10 * dt
-	end
-
-	if math.abs(pad:getAxis("lefty")) > 0.2 then
-		player.acceleration.y = player.acceleration.y + pad:getAxis("lefty") * 100 * dt
-	else
-		player.acceleration.y = 0
-	end
-
-	if math.abs(player.velocity.y) > 1 then
-		pad:setRumble(math.abs(player.velocity.y) / 300)
-		pad:setVibrate(0)
-	end
 
 	player:Update(dt)
 	AsteroidFactory:UpdateAll(dt, player)
