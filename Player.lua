@@ -19,29 +19,20 @@ Player = Class{inherits = SpaceObject,
 }
 
 function Player:Update(dt)
-	if pad:justReleased("a") then
-		self:Shoot()
+	if love.keyboard.isDown("a") then
+		self.angVelocity = self.angVelocity - 10 * dt
 	end
 
-	if pad:justReleased("b") then
-		self.position.x = math.random(0, 800)
-		self.position.y = math.random(0, 600)
-		self:Update(0)
+	if love.keyboard.isDown("d") then
+		self.angVelocity = self.angVelocity + 10 * dt
 	end
 
-	if math.abs(pad:getAxis("leftx")) > 0.2 then
-		self.angVelocity = self.angVelocity + pad:getAxis("leftx") * 10 * dt
-	end
-
-	if math.abs(pad:getAxis("lefty")) > 0.2 then
-		self.acceleration.y = self.acceleration.y + pad:getAxis("lefty") * 100 * dt
+	if love.keyboard.isDown("w") then
+		self.acceleration.y = self.acceleration.y + 100 * dt
+	elseif love.keyboard.isDown("s") then
+		self.acceleration.y = self.acceleration.y - 100 * dt
 	else
 		self.acceleration.y = 0
-	end
-
-	if math.abs(self.velocity.y) > 1 then
-		pad:setRumble(math.abs(self.velocity.y) / 300)
-		pad:setVibrate(0)
 	end
 
 	self.velocity = self.velocity + self.acceleration * dt
@@ -78,6 +69,18 @@ function Player:Update(dt)
 
 	if self.heading > 360 then
 		self.heading = self.heading - 360
+	end
+end
+
+function Player:HandleKeyboard( key )
+	if key == " " then
+		self:Shoot()
+	end
+
+	if key == "e" then
+		self.position.x = math.random(0, 800)
+		self.position.y = math.random(0, 600)
+		self:Update(0)
 	end
 end
 

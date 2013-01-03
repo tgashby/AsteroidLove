@@ -1,13 +1,6 @@
--- Xbox controller support!
-love.joystick = require('XInputLUA')
-
--- Helper for Controller Support
-xpad = require('XPad')
-
 Vector2D = require('hump.vector')
 Timer = require('hump.timer')
 
-local controllers = {}
 local asteroidsDestoyed = 0
 local gameOver = false
 local justHit = false
@@ -21,18 +14,8 @@ love.filesystem.load("Bullet.lua")()
 love.filesystem.load("Player.lua")()
 
 function love.load()
-	xpad:init(love.joystick)
-
-	love.joystick.update()
-
 	player = Player(100, Vector2D(400, 300))
 	shipImg = love.graphics.newImage('img/ship.png')
-
-	for i = 1, love.joystick.getNumJoysticks() do
-		table.insert(controllers, xpad:newplayer())
-	end
-
-	pad = controllers[1]
 
 	Timer.add(3,
 		function (timedFunc)
@@ -119,8 +102,6 @@ function love.update(dt)
 		return
 	end
 
-	love.joystick.update()
-	xpad:update()
 	Timer.update(dt)
 
 	player:Update(dt)
@@ -163,6 +144,8 @@ function love.draw()
 end
 
 function love.keyreleased(key, unicode)
+	player:HandleKeyboard(key)
+
 	if key == "escape" then
       love.event.push("quit")
    end
