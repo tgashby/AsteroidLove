@@ -34,9 +34,10 @@ function love.load()
 
 	pad = controllers[1]
 
-	Timer.add(3, 
+	Timer.add(3,
 		function (timedFunc)
-			local img = love.graphics.newImage('img/asteroid' .. math.random(1, 2) .. '.png')
+			local imageName = 'img/asteroid' .. math.random(1, 2) .. '.png'
+			local img = love.graphics.newImage(imageName)
 			local posX = math.random(img:getWidth(), 800 - img:getWidth())
 			local posY = 0
 
@@ -87,7 +88,7 @@ function DispatchCollisions()
 			if not justHit then
 				player.collision_with["Asteroid"](asteroid)
 			end
-			
+
 			justHit = true
 			Timer.add(2, function (timedFunc)
 				justHit = false
@@ -180,7 +181,8 @@ function love.draw()
 	end
 
 	for lives = 1, math.ceil(player.health / 10) do
-		love.graphics.draw(shipImg, 800 - player.bounds.width * 2 * lives, 600 - player.bounds.height * 2)
+		love.graphics.draw(shipImg, 800 - player.bounds.width * 2 * lives,
+		 600 - player.bounds.height * 2)
 	end
 end
 
