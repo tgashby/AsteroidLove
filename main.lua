@@ -57,8 +57,8 @@ function DispatchCollisions()
     for i, asteroid in ipairs(AsteroidFactory.asteroids) do
         for j, bullet in ipairs(BulletFactory.bullets) do
             if asteroid.bounds:IsColliding(bullet.bounds) then
-                asteroid.collision_with["Bullet"](bullet)
-                bullet.collision_with["Asteroid"](asteroid)
+                asteroid.collision_with[bullet.type](bullet)
+                bullet.collision_with[asteroid.type](asteroid)
             end
 
             if bullet.health <= 0 then
@@ -67,10 +67,10 @@ function DispatchCollisions()
         end
 
         if asteroid.bounds:IsColliding(player.bounds) then
-            asteroid.collision_with["Player"](player)
+            asteroid.collision_with[player.type](player)
 
             if not justHit then
-                player.collision_with["Asteroid"](asteroid)
+                player.collision_with[asteroid.type](asteroid)
             end
 
             justHit = true
