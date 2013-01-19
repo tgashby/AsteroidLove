@@ -51,7 +51,6 @@ function love.load()
     )
 end
 
-
 function DispatchCollisions()
     local asteroidsToRemove, bulletsToRemove = {}, {}
 
@@ -86,6 +85,7 @@ function DispatchCollisions()
         end
     end
 
+    -- Fun use of length operator
     asteroidsDestoyed = asteroidsDestoyed + #asteroidsToRemove
 
     for i, ndx in ipairs(asteroidsToRemove) do
